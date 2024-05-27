@@ -1,0 +1,175 @@
+<!--
+   
+Requirements:-
+
+1. Create a new website using HTML and Bootstrap. 
+2. The website must include the following:
+3. At least 2 pages.
+4. A Bootstrap navbar, table, and form.
+5. Bootstrap grid used throughout to format elements.
+6. Elements should stack vertically when the window is small.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewFrontEndDevelopement</title>
+
+    <!-- Following is the link needed for bootstrap npm install though this is not what is used for this project.
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> 
+    -->
+
+    <!-- Following is the link needed for bootstrap cdn install -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container justify-content-center mt-2">
+        <div class="row fluid bg-info-subtle  block">
+            <div class="d-inline-flex">
+                <a href="#" class="pull-left my-auto"><img class="img-responsive" height="80em" width="100em" src="https://www.letsdesignit.nl/images/logo.png"></a>
+                <div class="col">
+                    <h1 style="font-size:4vw" class="fluid text-center text-primary mt-2 bold">Front End
+                        Development</h1>
+                    <h4 style="font-size:2.5vw" class="fluid text-center text-success mt-2 italic">All about designing
+                        Web Pages.</h4>
+                </div>
+                <a href="#" class="pull-right my-auto"><img class="img-responsive"height="80em" width="100em" src="https://www.letsdesignit.nl/images/logo.png"></a>
+            </div>
+        </div>
+
+        <!--  Here a navbar is created with a form that has 2 buttons that let us navigate to the 2 pages of the website.
+                  Navbar is responsive -->
+
+        <nav class="navbar navbar-expand-md mt-4 mb-3 bg-body-tertiary" role="navigation">
+            <div class="container-fluid justify-content-start">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <a class="navbar-brand" href="#"></a>
+                    <div class="dropdown">
+                        <a class="btn btn-lg btn-outline-secondary  me-2" role="button" type="button"
+                            href="./index.html">Home</a>
+                        <a class="btn btn-lg btn-outline-secondary " role="button" type="button"
+                            href="./contact-us.html">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Here, some images and data has been created using bootstrap component cards. -->
+        <!-- Bootstrap Grid Layout for columns to stack vertically when the screen size is small -->
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-10">
+                <div class="card" style=" height:33rem">
+                    <!--Absolute path for the image  has been used-->
+                    <img src="https://s3.amazonaws.com/tf-nightingale/2022/12/html1.jpg" class="card-img-top"
+                        alt="Image 1" width="18rem" height="350rem" />
+                    <div class="card-body">
+                        <h5 class="card-title">HTML</h5>
+                        <div class="card-text">The structure of websites is created through HTML.</div>
+                        <a href="#" class="btn btn-primary">Learn HTML</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-10">
+                <div class="card" style="height:33rem">
+                    <!--Absolute path for the image  has been used-->
+                    <img src="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png" class="card-img-top"
+                        alt="Image 2" width="18rem" height="350rem" />
+                    <div class="card-body">
+                        <h5 class="card-title">CSS</h5>
+                        <div class="card-text">CSS is a language used for specifying the presentation and
+                            styling of a
+                            document written in HTML.</div>
+                        <a href="#" class="btn btn-primary">Learn CSS</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-10">
+                <div class="card" style="height:33rem">
+                    <!--Absolute path for the image  has been used-->
+                    <img src="https://epss.ucla.edu/static/bootstrap-5.2.0/site/static/docs/5.2/assets/brand/bootstrap-social-logo.png"
+                        class="card-img-top" alt="Image 3" width="18rem" height="350rem" />
+                    <div class="card-body">
+                        <h5 class="card-title">BootStrap</h5>
+                        <div class="card-text">Bootstrap is a CSS framework directed at responsive, mobile-first
+                            front-end web development.
+                        </div>
+                        <a href="#" class="btn btn-primary">Learn Bootstrap</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-10">
+                <div class="card" style=" height:33rem">
+                    <!--Absolute path for the image  has been used-->
+                    <img src="https://www.w3schools.com/whatis/img_js.png" class="card-img-top" a lt="Image 4"
+                        width="18rem" height="350rem" />
+                    <div class="card-body">
+                        <h5 class="card-title">JavaScript</h5>
+                        <div class="card-text">JavaScript is the Programming Language for the Web.</div>
+                        <a href="#" class="btn btn-primary">Learn JavaScript</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="container mt-4"> Let us know more!! Please fill in the following details:</p>
+    <!-- Following is the code for creating a form in bootstrap-->
+    <div class="container  w-auto justify-content-center mt-2">
+        <div class="row-lg-6">
+            <div class="col-xs-12 col-sm-10 col-lg-6  border bg-light">
+                <form class="my-2 mx-2 justify-content-start">
+                    <label for="email" class="form-label">Email Address:</label>
+                    <input type="email" class="form-control" id="email" placeholder="e.g. mario@gmail.com">
+
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="e.g. Mario">
+
+                    <label for="subject" class="form-label">Please choose your area of interest:</label>
+                    <select class="form-select" id="subject">
+                        <option selected>HTML</option>
+                        <option>CSS</option>
+                        <option>Bootstrap</option>
+                        <option>JQuery</option>
+                        <option>React</option>
+                    </select>
+                    <div class="mb-3 form-check mt-2">
+                        <input type="checkbox" class="form-check-input" id="Agree-to-terms" />
+                        <label class="form-check-label" for="Agree-to-terms">
+                            Agree to all the terms.
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container justify-content-center mt-5 align-bottom" style="font-weight: lighter;">
+        <hr>
+        <p> @ Totally responsive Front End Development using Bootstrap and html by Rekha.</p>
+
+    </footer>
+    <!-- Following is the link needed for bootstrap javscript npm install though this is not used for this project.
+         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"> </script> 
+    -->
+
+
+    <!-- Following is the link needed for bootstrap javascript npm install <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"> </script> -->
+    <!-- Following is the link needed for bootstrap javascript cdn install -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
